@@ -1,0 +1,48 @@
+# Fetches 7 days of tide extremes from Stormglass.io once a day and commits
+# the result to public/data/tides.json, which the site reads statically.
+#
+# Setup (one-time):
+#   1. Sign up at https://dashboard.stormglass.io/register (free tier).
+#   2. In the GitHub repo: Settings → Secrets and variables → Actions →
+#      New repository secret, name it STORMGLASS_API_KEY.
+#
+# NOTE: paths below assume the repo root is the Next.js app (package.json at
+# the top level). If the app lives in a subfolder of the repo, add a
+# `defaults: run: working-directory:` for it and prefix the git-add path.
+
+name: Update tide data
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # daily at 03:17 UTC (off the whole-hour rush)
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-tides:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch tide extremes from Stormglass
+        run: node scripts/fetch-tides.mjs
+        env:
+          STORMGLASS_API_KEY: ${{ secrets.STORMGLASS_API_KEY }}
+
+      - name: Commit updated tide data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/tides.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update tide data"
+            git push
+          fi
