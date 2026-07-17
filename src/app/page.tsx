@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ParkMap from "@/components/ParkMap";
 import RangerPassport from "@/components/RangerPassport";
+import SunTimes from "@/components/SunTimes";
 import TideTimes from "@/components/TideTimes";
 import Hero from "@/components/Hero";
 import StatBand from "@/components/StatBand";
@@ -135,6 +136,13 @@ export default function Home() {
           <SectionHeading>Tide Times</SectionHeading>
           <div className="mt-6">
             <TideTimes />
+          </div>
+        </section>
+
+        <section id="sun">
+          <SectionHeading>Sun &amp; Golden Hour</SectionHeading>
+          <div className="mt-6">
+            <SunTimes />
           </div>
         </section>
 
