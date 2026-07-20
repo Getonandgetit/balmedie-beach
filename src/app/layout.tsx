@@ -26,6 +26,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://balmedie-beach.vercel.app"),
   title: {
     default: "Balmedie Beach — A Guided Coastal Walk",
     template: "%s — Balmedie Beach",
