@@ -222,10 +222,10 @@ export default function ParkMap() {
       <div className="poster-frame relative overflow-hidden">
         <div className="relative">
           <Image
-            src="/images/beach-map.png"
+            src="/images/beach-map-v2.png"
             alt="Illustrated visitor map of Balmedie Country Park showing the five waymarked routes, facilities, and numbered landmarks"
-            width={1492}
-            height={1054}
+            width={1257}
+            height={887}
             className="block h-auto w-full"
             sizes="(max-width: 1152px) 100vw, 1088px"
           />

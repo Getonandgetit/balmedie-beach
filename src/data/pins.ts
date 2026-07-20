@@ -91,7 +91,7 @@ export const routes: MapRoute[] = [
   },
 ];
 
-// Pin positions are percentages of the map artwork (1492 × 1054).
+// Pin positions are percentages of the map artwork (beach-map-v2.png, 1257 × 887).
 // The numbered landmarks match the markers printed on the map; wildlife and
 // geography hotspots are indicative placements within the right habitat zone.
 export const pins: Pin[] = [
@@ -99,8 +99,8 @@ export const pins: Pin[] = [
   {
     id: "sand-bothy",
     layer: "landmarks",
-    x: 14.6,
-    y: 53.9,
+    x: 16.5,
+    y: 55.7,
     title: "The Sand Bothy",
     blurb:
       "The park's information hub by the main car park — exhibition, toilets, refreshments, and the starting point for all five waymarked routes.",
@@ -110,8 +110,8 @@ export const pins: Pin[] = [
   {
     id: "ice-house",
     layer: "landmarks",
-    x: 80.8,
-    y: 46.1,
+    x: 79.1,
+    y: 49.0,
     title: "Ice House",
     blurb:
       "The surviving dune ice house where the salmon catch was packed to keep it fresh before the journey to market — a relic of the coast's fishing economy.",
@@ -122,8 +122,8 @@ export const pins: Pin[] = [
   {
     id: "bunker",
     layer: "ww2",
-    x: 21.6,
-    y: 35.8,
+    x: 23.3,
+    y: 41.3,
     title: "The Bunker",
     blurb:
       "A surviving wartime structure in the dunes near the beach access — part of the coastal defences that once lined this shore.",
@@ -133,8 +133,8 @@ export const pins: Pin[] = [
   {
     id: "pillboxes",
     layer: "ww2",
-    x: 41.6,
-    y: 41.5,
+    x: 41.2,
+    y: 44.9,
     title: "Pill Boxes",
     blurb:
       "The pillbox group, including the unusual seven-sided design with nine firing embrasures — still standing guard over the dunes.",
@@ -145,8 +145,8 @@ export const pins: Pin[] = [
   {
     id: "tern-colony",
     layer: "wildlife",
-    x: 60.3,
-    y: 21.8,
+    x: 55.7,
+    y: 27.1,
     title: "Tern Colony",
     blurb: "Breeding terns nest on the upper foreshore in early summer — please keep to the paths.",
     href: "/wildlife",
@@ -154,8 +154,8 @@ export const pins: Pin[] = [
   {
     id: "eider-rafts",
     layer: "wildlife",
-    x: 75.7,
-    y: 8.5,
+    x: 68.4,
+    y: 16.9,
     title: "Eider Rafts",
     blurb: "Eider ducks gather offshore in loose rafts, often visible from the beach year-round.",
     href: "/wildlife",
@@ -163,8 +163,8 @@ export const pins: Pin[] = [
   {
     id: "dune-flora",
     layer: "wildlife",
-    x: 46.9,
-    y: 30.4,
+    x: 35.4,
+    y: 34.4,
     title: "Dune Flora Zone",
     blurb: "Marram grass, crowberry and cross-leaved heath stabilise the fixed dunes here.",
     href: "/wildlife",
@@ -172,8 +172,8 @@ export const pins: Pin[] = [
   {
     id: "water-vole-burn",
     layer: "wildlife",
-    x: 76.7,
-    y: 37.5,
+    x: 79.6,
+    y: 38.3,
     title: "Water Vole Burn",
     blurb: "The burn's wetland margin is home to a small water vole population.",
     href: "/wildlife",
@@ -182,8 +182,8 @@ export const pins: Pin[] = [
   {
     id: "mobile-dunes",
     layer: "geography",
-    x: 28.8,
-    y: 23.7,
+    x: 23.9,
+    y: 25.9,
     title: "Mobile Dune Viewpoint",
     blurb: "Watch active sand movement on the seaward face of the youngest, mobile dunes.",
     href: "/physical-geography",
@@ -191,8 +191,8 @@ export const pins: Pin[] = [
   {
     id: "fixed-dunes",
     layer: "geography",
-    x: 64.3,
-    y: 62.6,
+    x: 70.0,
+    y: 66.5,
     title: "Fixed Dune & Heath",
     blurb: "Older, stabilised dunes now support heath vegetation over 5,000+ years of formation.",
     href: "/physical-geography",
@@ -200,8 +200,8 @@ export const pins: Pin[] = [
   {
     id: "burn-mouth",
     layer: "geography",
-    x: 66.0,
-    y: 30.2,
+    x: 66.7,
+    y: 33.4,
     title: "The Burn",
     blurb: "Where the burn cuts through the dunes towards the sea — a good erosion case study.",
     href: "/physical-geography",
