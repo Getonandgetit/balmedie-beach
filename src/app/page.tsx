@@ -68,7 +68,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
 
 export default function Home() {
   return (
-    <main className="flex-1 px-4 py-8 sm:px-8">
+    <main id="main-content" className="flex-1 px-4 py-8 sm:px-8">
       <div
         className="mx-auto max-w-6xl rounded-2xl p-4 shadow-lg sm:p-8"
         style={{ backgroundColor: palette.offWhite }}

@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import TriviaQuiz, { type TriviaQuestion } from "@/components/quiz/TriviaQuiz";
 import { palette } from "@/lib/palette";
+
+export const metadata: Metadata = {
+  title: "Human Geography",
+  description:
+    "Salmon nets, ice houses, oil money and a contested golf course — the human story of Balmedie and Belhelvie parish.",
+};
 
 const trivia: TriviaQuestion[] = [
   {
@@ -58,7 +65,7 @@ function Chapter({
 
 export default function HumanGeographyPage() {
   return (
-    <main className="flex-1 px-4 py-8 sm:px-8">
+    <main id="main-content" className="flex-1 px-4 py-8 sm:px-8">
       <div
         className="mx-auto max-w-3xl rounded-2xl p-4 shadow-lg sm:p-8"
         style={{ backgroundColor: palette.offWhite }}

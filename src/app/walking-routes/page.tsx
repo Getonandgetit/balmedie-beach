@@ -1,12 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import RouteCard from "@/components/RouteCard";
 import RoutePicker from "@/components/quiz/RoutePicker";
 import { palette } from "@/lib/palette";
 
+export const metadata: Metadata = {
+  title: "Walking Routes",
+  description:
+    "Five colour-coded waymarked routes at Balmedie Country Park, from the fully accessible Beach Walk to the 3.5 km Thyme Walk.",
+};
+
 export default function WalkingRoutesPage() {
   return (
-    <main className="flex-1 px-4 py-8 sm:px-8">
+    <main id="main-content" className="flex-1 px-4 py-8 sm:px-8">
       <div
         className="mx-auto max-w-3xl rounded-2xl p-4 shadow-lg sm:p-8"
         style={{ backgroundColor: palette.offWhite }}
@@ -112,9 +119,6 @@ export default function WalkingRoutesPage() {
           <RoutePicker />
         </div>
 
-        <p className="mt-4 text-xs italic" style={{ color: palette.ink, opacity: 0.6 }}>
-          Coming soon: an interactive elevation profile for each route.
-        </p>
       </div>
     </main>
   );

@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import SequencingQuiz from "@/components/quiz/SequencingQuiz";
 import { palette } from "@/lib/palette";
+
+export const metadata: Metadata = {
+  title: "Physical Geography",
+  description:
+    "How 5,000 years of wind, sand and marram grass built the Balmedie dune system — from foredune to fixed heath.",
+};
 
 const dunesScrambled = [
   { id: "fixed", label: "Fixed Dune & Heath" },
@@ -41,7 +48,7 @@ function Stage({
 
 export default function PhysicalGeographyPage() {
   return (
-    <main className="flex-1 px-4 py-8 sm:px-8">
+    <main id="main-content" className="flex-1 px-4 py-8 sm:px-8">
       <div
         className="mx-auto max-w-3xl rounded-2xl p-4 shadow-lg sm:p-8"
         style={{ backgroundColor: palette.offWhite }}

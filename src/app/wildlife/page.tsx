@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import SpeciesIdQuiz from "@/components/quiz/SpeciesIdQuiz";
 import { palette } from "@/lib/palette";
+
+export const metadata: Metadata = {
+  title: "Wildlife",
+  description:
+    "Terns, eiders, skylarks and water voles — Balmedie's wildlife, habitat zone by habitat zone from surf to heath.",
+};
 
 function Zone({
   title,
@@ -27,7 +34,7 @@ function Zone({
 
 export default function WildlifePage() {
   return (
-    <main className="flex-1 px-4 py-8 sm:px-8">
+    <main id="main-content" className="flex-1 px-4 py-8 sm:px-8">
       <div
         className="mx-auto max-w-3xl rounded-2xl p-4 shadow-lg sm:p-8"
         style={{ backgroundColor: palette.offWhite }}

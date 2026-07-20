@@ -26,7 +26,10 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Balmedie Beach — A Guided Coastal Walk",
+  title: {
+    default: "Balmedie Beach — A Guided Coastal Walk",
+    template: "%s — Balmedie Beach",
+  },
   description:
     "A visitor's guide to Balmedie Beach, Aberdeenshire: walking routes, WW2 history, wildlife, and the geography of the coast.",
   openGraph: {
@@ -63,6 +66,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${alfaSlab.variable} ${oswald.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <a
+          href="#main-content"
+          className="sr-only z-[100] rounded-full px-4 py-2 font-medium focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:bg-[#1f4f4f] focus:text-[#f6f1e4]"
+        >
+          Skip to content
+        </a>
         <Header />
         {children}
         <Footer />

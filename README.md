@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Balmedie Beach — A Guided Coastal Walk
 
-## Getting Started
+A visitor's guide to **Balmedie Country Park**, Aberdeenshire, Scotland — built
+as a vintage travel poster you can click. Walking routes, WW2 history, wildlife,
+and 5,000 years of shifting dunes, told as guided walks rather than dry reference.
 
-First, run the development server:
+## Features
+
+- **Illustrated interactive map** — a hand-drawn park map with toggleable pin
+  layers (landmarks, WW2 sites, wildlife, geography), route picker, and pop-up
+  cards that link into the topic pages
+- **Five topic walks** — Walking Routes, WW2 History, Wildlife, Physical
+  Geography, and Human Geography, each written as a guided walk with its own quiz
+- **Ranger Passport** — finish each topic's quiz to stamp a browser-local
+  passport and climb the ranks to Balmedie Beach Ranger
+- **Live tide times** — 7 days of tide extremes for the beach, refreshed daily
+  by a GitHub Actions workflow from the Stormglass API (see below)
+- **Sun & golden hour** — sunrise, sunset, twilight and golden-hour times
+  computed in the browser with [suncalc](https://github.com/mourner/suncalc);
+  no API needed
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev    # http://localhost:3000
+npm run build  # production build (fully static)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Built with Next.js (App Router), Tailwind CSS v4, and TypeScript.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tide data pipeline
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`.github/workflows/update-tides.yml` runs daily at 03:17 UTC. It calls the
+[Stormglass](https://stormglass.io) tide-extremes API once (free tier is
+10 requests/day), writes `public/data/tides.json`, and commits it. The site
+only ever reads that static file — no API calls from the browser.
 
-## Learn More
+Setup: add your Stormglass API key as a repository secret named
+`STORMGLASS_API_KEY`. To generate placeholder data locally:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+node scripts/fetch-tides.mjs --sample
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Wildlife and geography map hotspots are indicative placements, not surveyed
+  positions. Tide and sun data are for planning only — check conditions before
+  walking the shore.
+- Tide data via Stormglass.io. Map artwork and hero illustrations are original
+  to this project.

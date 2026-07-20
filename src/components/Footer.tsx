@@ -67,6 +67,18 @@ export default function Footer() {
             </Link>
           ))}
         </nav>
+        <nav className="mt-2 flex flex-wrap justify-center gap-x-6 gap-y-2 font-heading text-xs uppercase tracking-widest">
+          {[
+            { href: "/#map", label: "Park Map" },
+            { href: "/#tides", label: "Tide Times" },
+            { href: "/#sun", label: "Sun & Golden Hour" },
+            { href: "/#passport", label: "Ranger Passport" },
+          ].map((t) => (
+            <Link key={t.href} href={t.href} className="nav-link py-1" style={{ color: palette.sand }}>
+              {t.label}
+            </Link>
+          ))}
+        </nav>
 
         <p className="mt-6 text-xs" style={{ color: palette.offWhite, opacity: 0.55 }}>
           A guided-walk companion to Balmedie Country Park. Prototype site — check

@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import MapClickQuiz from "@/components/quiz/MapClickQuiz";
 import TriviaQuiz, { type TriviaQuestion } from "@/components/quiz/TriviaQuiz";
 import { palette } from "@/lib/palette";
+
+export const metadata: Metadata = {
+  title: "WW2 History",
+  description:
+    "Pillboxes, anti-tank blocks and the bomb cemetery — walking Balmedie's WW2 coastal defences from north to south.",
+};
 
 const trivia: TriviaQuestion[] = [
   {
@@ -81,7 +88,7 @@ function Stop({
 
 export default function WW2HistoryPage() {
   return (
-    <main className="flex-1 px-4 py-8 sm:px-8">
+    <main id="main-content" className="flex-1 px-4 py-8 sm:px-8">
       <div
         className="mx-auto max-w-3xl rounded-2xl p-4 shadow-lg sm:p-8"
         style={{ backgroundColor: palette.offWhite }}
