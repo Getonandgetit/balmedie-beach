@@ -99,6 +99,14 @@ function PinInfoCard({ pin, onClose }: { pin: Pin; onClose: () => void }) {
   );
 }
 
+// Readable text colour for a chip of the given background colour.
+function textOn(hex: string): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return 0.299 * r + 0.587 * g + 0.114 * b > 150 ? palette.ink : palette.offWhite;
+}
+
 function RouteSwatch({ route }: { route: MapRoute }) {
   return (
     <svg width="46" height="8" viewBox="0 0 46 8" aria-hidden="true" className="flex-none">
@@ -209,7 +217,7 @@ export default function ParkMap() {
               style={{
                 borderColor: route.color,
                 backgroundColor: selected ? route.color : "transparent",
-                color: selected ? palette.offWhite : route.color,
+                color: selected ? textOn(route.color) : route.color,
               }}
               aria-pressed={selected}
             >

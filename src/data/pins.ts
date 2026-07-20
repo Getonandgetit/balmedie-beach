@@ -40,10 +40,10 @@ export const routes: MapRoute[] = [
     difficulty: "Easy",
     distance: "600 m",
     duration: "15–20 min",
-    color: "#1f6f6f",
+    color: "#632d91",
     dashed: false,
     blurb:
-      "Follow the solid teal line from the Sand Bothy straight to the sand — the fully accessible route to the beach, good for wheelchairs and buggies.",
+      "Follow the dark purple line from the Sand Bothy straight to the sand — the fully accessible route to the beach, good for wheelchairs and buggies.",
   },
   {
     slug: "marram-grass",
@@ -51,10 +51,10 @@ export const routes: MapRoute[] = [
     difficulty: "Easy",
     distance: "800 m",
     duration: "20–30 min",
-    color: "#b23a4e",
+    color: "#ee237d",
     dashed: false,
     blurb:
-      "Follow the crimson line through the marram-bound dunes behind the beach — a short loop with the best close-up of the mobile dune system.",
+      "Follow the bright pink line through the marram-bound dunes behind the beach — a short loop with the best close-up of the mobile dune system.",
   },
   {
     slug: "ice-house-route",
@@ -62,10 +62,10 @@ export const routes: MapRoute[] = [
     difficulty: "Easy",
     distance: "1.7 km",
     duration: "30–45 min",
-    color: "#c98a3a",
+    color: "#f69324",
     dashed: false,
     blurb:
-      "Follow the gold line east across the park to the historic salmon-fishery ice house — the walk with the most heritage per step.",
+      "Follow the golden-yellow line east across the park to the historic salmon-fishery ice house — the walk with the most heritage per step.",
   },
   {
     slug: "horse-route",
@@ -73,7 +73,7 @@ export const routes: MapRoute[] = [
     difficulty: "Easy",
     distance: "500 m",
     duration: "10–15 min",
-    color: "#6b4a2b",
+    color: "#852c16",
     dashed: false,
     blurb:
       "Follow the brown line on the short bridleway loop — shared with riders, so keep dogs close and give horses room.",
@@ -84,10 +84,10 @@ export const routes: MapRoute[] = [
     difficulty: "Moderate",
     distance: "3.5 km",
     duration: "1–1.5 hrs",
-    color: "#a83c28",
-    dashed: true,
+    color: "#bd1d2a",
+    dashed: false,
     blurb:
-      "Follow the dashed brick-red line on the park's longest loop, sweeping east past the pill boxes and ice house before circling back through the heath.",
+      "Follow the dark red line on the park's longest loop, sweeping east past the pill boxes and ice house before circling back through the heath.",
   },
 ];
 

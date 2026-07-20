@@ -49,7 +49,7 @@ export default function WalkingRoutesPage() {
             duration="15–20 min"
             elevation="Flat"
             terrain="Fully accessible surfaced path and boardwalk"
-            description="The teal line on the map, and the route everyone can use: a fully accessible path from the Sand Bothy straight to the beach, designed for wheelchairs, buggies and anyone who wants the sea with the least effort."
+            description="The dark purple line on the map, and the route everyone can use: a fully accessible path from the Sand Bothy straight to the beach, designed for wheelchairs, buggies and anyone who wants the sea with the least effort."
           />
           <RouteCard
             name="Marram Grass Route"
@@ -59,7 +59,7 @@ export default function WalkingRoutesPage() {
             duration="20–30 min"
             elevation="Gentle"
             terrain="Dune paths, some soft sand"
-            description="The crimson line: a short loop through the marram-bound dunes behind the beach — the best close-up look at the grasses that hold this whole coastline together."
+            description="The bright pink line: a short loop through the marram-bound dunes behind the beach — the best close-up look at the grasses that hold this whole coastline together."
           />
           <RouteCard
             name="Horse Route"
@@ -79,7 +79,7 @@ export default function WalkingRoutesPage() {
             duration="30–45 min"
             elevation="Gentle"
             terrain="Firm park paths"
-            description="The gold line: east across the park to the historic ice house where the salmon catch was once packed for market. The walk with the most heritage per step — see the Human Geography page for the full story."
+            description="The golden-yellow line: east across the park to the historic ice house where the salmon catch was once packed for market. The walk with the most heritage per step — see the Human Geography page for the full story."
           />
           <RouteCard
             name="Thyme Walk"
@@ -89,7 +89,7 @@ export default function WalkingRoutesPage() {
             duration="1–1.5 hrs"
             elevation="Rolling"
             terrain="Dune heath paths, some soft sand"
-            description="The dashed brick-red line: the park's longest waymarked loop, sweeping east past the pill boxes and the ice house before circling back through the dune heath. The best option if you want a proper walk that ties the whole park together."
+            description="The dark red line: the park's longest waymarked loop, sweeping east past the pill boxes and the ice house before circling back through the dune heath. The best option if you want a proper walk that ties the whole park together."
           />
         </div>
 
