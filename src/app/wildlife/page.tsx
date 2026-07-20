@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import SpeciesIdQuiz from "@/components/quiz/SpeciesIdQuiz";
+import ThisMonth from "@/components/ThisMonth";
 import { palette } from "@/lib/palette";
 
 export const metadata: Metadata = {
@@ -66,6 +67,8 @@ export default function WildlifePage() {
           four habitat zones, each with its own residents, sit stacked
           between the car park and the waterline.
         </p>
+
+        <ThisMonth />
 
         <Zone title="Foreshore">
           <p>

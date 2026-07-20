@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import DuneFormation from "@/components/DuneFormation";
 import SequencingQuiz from "@/components/quiz/SequencingQuiz";
 import { palette } from "@/lib/palette";
 
@@ -141,6 +142,10 @@ export default function PhysicalGeographyPage() {
         </div>
 
         <div className="mt-8">
+          <DuneFormation />
+        </div>
+
+        <div className="mt-8">
           <SequencingQuiz
             title="Order the stages of dune formation"
             accent={palette.sandDark}
@@ -149,10 +154,6 @@ export default function PhysicalGeographyPage() {
             stampId="geography"
           />
         </div>
-
-        <p className="mt-4 text-xs italic" style={{ color: palette.ink, opacity: 0.6 }}>
-          Coming soon: an animated &ldquo;how a dune forms&rdquo; diagram.
-        </p>
       </div>
     </main>
   );
